@@ -4,39 +4,45 @@
 
   const scheduleData = [
     {
-      name: "Introduction Cloud Computing with Google Cloud",
-      date: "9 Maret 2022, 19.00 WIB",
-      liveUrl: "https://www.youtube.com/watch?v=wTIqXDZf42A",
+      name: "Info Session #JuaraAndroid",
+      date: "17 Maret 2022, 19.00 WIB",
+      liveUrl: "https://s.id/juaraandroid1",
+      absentUrl: "",
+    },
+    {
+      name: "LiveCoding Session #JuaraAndroid",
+      date: "28 Maret 2022, 19.00 WIB",
+      liveUrl: "https://s.id/juaraandroid2",
       absentUrl: "",
     },
   ];
 </script>
 
-<TextHeader>Jadwal Pelatihan</TextHeader>
+<TextHeader>Jadwal Sesi</TextHeader>
 
 <div class="flex flex-col text-left font-mono text-sm divide-y-4 max-w-4xl">
   <table class="table table-auto border-separate">
     <thead>
       <tr>
-        <th class="border border-slate-600">Topik</th>
-        <th class="border border-slate-600">Tanggal / Jam</th>
-        <th class="border border-slate-600">Tautan Live Session</th>
-        <th class="border border-slate-600">Tautan Absensi</th>
+        <th class="border border-slate-600 p-2">Topik</th>
+        <th class="border border-slate-600 p-2">Tanggal / Jam</th>
+        <th class="border border-slate-600 p-2">Tautan Registrasi</th>
+        <!-- <th class="border border-slate-600">Tautan Absensi</th> -->
       </tr>
     </thead>
     <tbody>
       {#each scheduleData as sched, idx}
         <tr>
-          <td class="border border-slate-600">{sched.name} </td>
-          <td class="border border-slate-600">{sched.date}</td>
-          <td class="border border-slate-600 text-center"
+          <td class="border border-slate-600 p-2">{sched.name}</td>
+          <td class="border border-slate-600 p-2">{sched.date}</td>
+          <td class="border border-slate-600 p-2 text-center"
             ><a
               href="{sched.liveUrl}"
               class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
-              >Pertemuan {idx + 1}</a
+              >Sesi {idx + 1}</a
             ></td
           >
-          <td class="border border-slate-600 text-center">
+          <!-- <td class="border border-slate-600 text-center">
             {#if sched.absentUrl}
               <a
                 href="{sched.absentUrl}"
@@ -46,7 +52,7 @@
             {:else}
               <span>Tidak Diperlukan</span>
             {/if}
-          </td>
+          </td> -->
         </tr>
       {/each}
     </tbody>
