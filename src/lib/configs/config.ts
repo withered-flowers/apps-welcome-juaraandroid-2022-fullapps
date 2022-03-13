@@ -1,5 +1,5 @@
-export const eventTimeStart: string = "2022-03-17T00:00:00.000+07:00";
-export const eventTimeEnd: string = "2022-04-16T23:59:59.000+07:00";
+export const eventTimeStart: string = "2022-03-13T09:45:00.000+07:00";
+export const eventTimeEnd: string = "2022-03-13T09:46:00.000+07:00";
 
 export const LIST_OF_BADGE: string[] = [
   // Unit 1: Kotlin Basics

@@ -17,6 +17,9 @@ export let countdown_pre_event_string3_notif: string = `Dihitung berdasarkan wak
 export let countdown_event_string1_start: string = `${eventName} selesai pada`;
 export let countdown_event_string2_further1: string = `Kunjungi`;
 export let countdown_event_string2_further2: string = `untuk mempelajari event ${eventName} lebih lanjut`;
+
+export let countdown_event_string1_end: string = `${eventName} sudah selesai...`;
+
 export let countdown_event_string3_notif: string = `Dihitung berdasarkan waktu server Indonesia dengan waktu UTC+7`;
 
 export let countdown_event_string5_faq1: string = `Ada pertanyaan? Silahkan baca`;

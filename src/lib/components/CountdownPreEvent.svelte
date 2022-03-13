@@ -13,12 +13,19 @@
     countdown_pre_event_string2_further2,
     eventUrlAlias,
   } from "$lib/strings/id";
-  import { checkEventStarted } from "$lib/utils/helper";
+  // import { checkEventStarted } from "$lib/utils/helper";
+  import { checkEventStarted, isEventStarted } from "$lib/stores/store";
 
   import TextHeader from "$lib/components/TextHeader.svelte";
   import TextLine from "$lib/components/TextLine.svelte";
 
   const endTime = eventTimeStart;
+
+  let eventStarted;
+
+  isEventStarted.subscribe((val) => {
+    eventStarted = val;
+  });
 
   let timer = null;
   let now = dayjs().valueOf();
@@ -28,7 +35,9 @@
     timer = setInterval(() => {
       now = dayjs().valueOf();
 
-      if (checkEventStarted()) {
+      checkEventStarted();
+
+      if (eventStarted) {
         goto("/", { replaceState: true });
         clearInterval(timer);
       }

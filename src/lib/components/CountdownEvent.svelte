@@ -8,6 +8,7 @@
   import {
     eventUrl,
     countdown_event_string1_start,
+    countdown_event_string1_end,
     countdown_event_string2_further1,
     countdown_event_string2_further2,
     countdown_event_string3_notif,
@@ -26,7 +27,7 @@
     countdown_event_string11_group3,
     countdown_event_string11_url,
   } from "$lib/strings/id";
-  import { checkEventEnded } from "$lib/utils/helper";
+  import { isEventEnded, checkEventEnded } from "$lib/stores/store";
 
   import TextHeader from "$lib/components/TextHeader.svelte";
   import TextLine from "$lib/components/TextLine.svelte";
@@ -36,14 +37,21 @@
   const endTime = eventTimeEnd;
 
   let timer = null;
+  let eventEnded;
   let now = dayjs().valueOf();
   let end = dayjs(endTime).valueOf();
+
+  isEventEnded.subscribe((val) => {
+    eventEnded = val;
+  });
 
   onMount(() => {
     timer = setInterval(() => {
       now = dayjs().valueOf();
 
-      if (checkEventEnded()) {
+      checkEventEnded();
+
+      if (eventEnded) {
         clearInterval(timer);
       }
     }, 1000);
@@ -60,29 +68,35 @@
   $: s = count % 60;
 </script>
 
-<TextHeader>
-  {countdown_event_string1_start}
-</TextHeader>
+{#if !eventEnded}
+  <TextHeader>
+    {countdown_event_string1_start}
+  </TextHeader>
 
-<div class="text-6xl text-center flex w-full items-center justify-center">
-  <div class="w-24 mx-1 p-2 bg-white text-[#fbbc05] rounded-lg">
-    <div class="font-mono leading-none">{d}</div>
-    <div class="font-mono uppercase text-sm leading-none">Hari</div>
+  <div class="text-6xl text-center flex w-full items-center justify-center">
+    <div class="w-24 mx-1 p-2 bg-white text-[#fbbc05] rounded-lg">
+      <div class="font-mono leading-none">{d}</div>
+      <div class="font-mono uppercase text-sm leading-none">Hari</div>
+    </div>
+    <div class="w-24 mx-1 p-2 bg-white text-[#fbbc05] rounded-lg">
+      <div class="font-mono leading-none">{h}</div>
+      <div class="font-mono uppercase text-sm leading-none">Jam</div>
+    </div>
+    <div class="w-24 mx-1 p-2 bg-white text-[#fbbc05] rounded-lg">
+      <div class="font-mono leading-none">{m}</div>
+      <div class="font-mono uppercase text-sm leading-none">Menit</div>
+    </div>
+    <div class="text-2xl mx-1 font-extralight text-slate-500">dan</div>
+    <div class="w-24 mx-1 p-2 bg-white text-[#fbbc05] rounded-lg">
+      <div class="font-mono leading-none">{s}</div>
+      <div class="font-mono uppercase text-sm leading-none">Detik</div>
+    </div>
   </div>
-  <div class="w-24 mx-1 p-2 bg-white text-[#fbbc05] rounded-lg">
-    <div class="font-mono leading-none">{h}</div>
-    <div class="font-mono uppercase text-sm leading-none">Jam</div>
-  </div>
-  <div class="w-24 mx-1 p-2 bg-white text-[#fbbc05] rounded-lg">
-    <div class="font-mono leading-none">{m}</div>
-    <div class="font-mono uppercase text-sm leading-none">Menit</div>
-  </div>
-  <div class="text-2xl mx-1 font-extralight text-slate-500">dan</div>
-  <div class="w-24 mx-1 p-2 bg-white text-[#fbbc05] rounded-lg">
-    <div class="font-mono leading-none">{s}</div>
-    <div class="font-mono uppercase text-sm leading-none">Detik</div>
-  </div>
-</div>
+{:else}
+  <TextHeader>
+    {countdown_event_string1_end}
+  </TextHeader>
+{/if}
 
 <TextLine>
   {countdown_event_string2_further1}
