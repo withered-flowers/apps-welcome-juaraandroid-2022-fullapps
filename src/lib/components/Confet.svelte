@@ -351,7 +351,7 @@
     setCSSVar("--rotation-duration", `${rotation}ms`);
     setCSSVar("--border-radius", `${isCircle ? "50%" : "0"}`);
   }
-  let transformContainer;
+  // let transformContainer;
   // console.log($$slots);
 </script>
 
@@ -360,8 +360,8 @@
     {#each particles as { color, degree }}
       <div
         class="particle"
-        class:default={$$slots.default !== true}
-        use:confettiStyles={{ degree }}
+        class:default="{$$slots.default !== true}"
+        use:confettiStyles="{{ degree }}"
       >
         <div style="--bgcolor: {color};"><slot /></div>
       </div>
