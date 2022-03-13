@@ -7,6 +7,7 @@
   import { eventTimeEnd } from "$lib/configs/config";
   import {
     eventUrl,
+    eventUrlAlias,
     countdown_event_string1_start,
     countdown_event_string1_end,
     countdown_event_string2_further1,
@@ -33,7 +34,6 @@
   import TextLine from "$lib/components/TextLine.svelte";
   import TextLineSmall from "$lib/components/TextLineSmall.svelte";
 
-  const stripEventUrl = "DTS Kominfo";
   const endTime = eventTimeEnd;
 
   let timer = null;
@@ -103,7 +103,7 @@
   <a
     href="{eventUrl}"
     class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
-    >{stripEventUrl}</a
+    >{eventUrlAlias}</a
   >
   {countdown_event_string2_further2}
 </TextLine>

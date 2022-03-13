@@ -33,9 +33,9 @@ export let countdown_event_string8_validator2: string =
 export let countdown_event_string8_validator3: string = " ini yah";
 
 export let countdown_event_string10_group1: string = `Masih buntu? Yuk join grup `;
-export let countdown_event_string10_group2: string = `Discord ${eventName}`;
+export let countdown_event_string10_group2: string = `Telegram ${eventName}`;
 export let countdown_event_string10_group3: string = ` untuk menanyakan lebih lanjut.`;
-export let countdown_event_string10_url: string = `https://discord.com/invite/bMSERnqUJs`;
+export let countdown_event_string10_url: string = `https://t.me/JuaraAndroid`;
 
 export let countdown_event_string11_group1: string = `Takut bila situs ini mengambil data Anda? Tenang, kode situs ini bisa dilihat di  `;
 export let countdown_event_string11_group2: string = `Github Repository`;
