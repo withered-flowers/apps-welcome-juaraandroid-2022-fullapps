@@ -11,15 +11,13 @@
     countdown_pre_event_string1_start,
     countdown_pre_event_string2_further1,
     countdown_pre_event_string2_further2,
-    countdown_pre_event_string3_notif,
+    eventUrlAlias,
   } from "$lib/strings/id";
   import { checkEventStarted } from "$lib/utils/helper";
 
   import TextHeader from "$lib/components/TextHeader.svelte";
   import TextLine from "$lib/components/TextLine.svelte";
-  import TextLineSmall from "$lib/components/TextLineSmall.svelte";
 
-  const stripEventUrl = eventUrl.replace(/(^\w+:|^)\/\//, "");
   const endTime = eventTimeStart;
 
   let timer = null;
@@ -77,11 +75,7 @@
   <a
     href="{eventUrl}"
     class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
-    >{stripEventUrl}</a
+    >{eventUrlAlias}</a
   >
   {countdown_pre_event_string2_further2}
 </TextLine>
-
-<TextLineSmall>
-  ({countdown_pre_event_string3_notif})
-</TextLineSmall>

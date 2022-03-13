@@ -4,9 +4,10 @@ interface QnA {
   a: string;
 }
 
-export let eventName: string = "PROA - Google CDL";
+export let eventName: string = "JuaraAndroid";
 export let eventUrl: string =
-  "https://digitalent.kominfo.go.id/detail/pelatihan/1642?akademiId=152";
+  "https://rsvp.withgoogle.com/events/juara-android-22/";
+export let eventUrlAlias: string = "juara-android-22";
 
 export let countdown_pre_event_string1_start: string = `${eventName} dimulai dalam`;
 export let countdown_pre_event_string2_further1: string = `Kunjungi`;
