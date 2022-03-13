@@ -1,10 +1,10 @@
-Countdown PROA - CDL FullApps [WIP]
+Countdown JuaraAndroid FullApps [WIP]
 
 Disclaimer:
 
     Kode yang dibuat di sini masih minimal dan masih bisa di-refactor lagi 😉
 
-Aplikasi ini dibuat untuk menginformasikan countdown event PROA - CDL dimulai s.d. event PROA - CDL ini selesai.
+Aplikasi ini dibuat untuk menginformasikan countdown event JuaraAndroid dimulai s.d. event JuaraAndroid ini selesai.
 
 Aplikasi ini bersifat Web Apps yang akan dideploy pada Netlify, salah satu produk untuk membuat aplikasi, dengan menggunakan beberapa functions (Netlify / cloud functions)
 
@@ -15,7 +15,7 @@ Tech stack yang digunakan untuk membuat aplikasi ini adalah:
     Tailwind sebagai CSS Utility
     Day.js untuk pustaka pemanipulasi tanggal
     Netlify sebagai tempat hosting aplikasi ini dan functionsnya
-    Got dan Linkedom sebagai pustaka scraping situs cloudskillsboost
+    Pupetteer dan Headless Chromium sebagai pustaka scrapping ke Developers Google
 
 Untuk menjalankan aplikasi ini, dapat dilakukan dengan cara:
 
