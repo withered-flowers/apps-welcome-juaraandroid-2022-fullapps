@@ -1,16 +1,16 @@
-import { fetchDataAsJson } from "$lib/providers/cloudskillsboost";
+import { fetchDataAsJson } from "$lib/providers/devgoogle";
 
 export async function post({ request }) {
   const data = await request.formData();
-  const csbUrl = data.get("csb");
+  const dgUrl = data.get("dg");
 
   try {
-    const jsonData = await fetchDataAsJson(csbUrl);
+    const jsonData = await fetchDataAsJson(dgUrl);
 
     return {
       status: 200,
       body: {
-        csbData: jsonData,
+        dgData: jsonData,
       },
     };
   } catch (error) {

@@ -3,19 +3,19 @@
   import TextLine from "$lib/components/TextLine.svelte";
 
   export let errors;
-  export let csbData;
+  export let dgData;
 </script>
 
 <TextHeader>Pengecek Profil Publik</TextHeader>
 
-{#if !csbData}
+{#if !dgData}
   <form method="POST">
     <div>
       <input
         class="px-4 py-4 rounded-full w-96 text-center mb-4"
         type="text"
-        name="csb"
-        id="csb"
+        name="dg"
+        id="dg"
         placeholder="Tautan Profil Publik Cloudskillsboost"
       />
     </div>
@@ -35,11 +35,11 @@
   </div>
 {/if}
 
-{#if csbData}
+{#if dgData}
   <div class="text-slate-500">
     <div class="mb-4">
       <p class="text-2xl text-center font-semibold">
-        Detail Profil CloudSkillsBoost
+        Detail Profil Google Developers
       </p>
     </div>
 
@@ -47,13 +47,13 @@
       <div>
         <p class="text-xl text-center">
           <span class="font-semibold">Nama:</span>
-          <span>{csbData.profileName}</span>
+          <span>{dgData.profileName}</span>
         </p>
       </div>
       <div>
         <p class="text-xl text-center">
           <span class="font-semibold">Selesai Pelatihan? </span>
-          {#if csbData.tiers === 1}
+          {#if dgData.tiers === 1}
             <span class="text-[#1aa260]">Selesai</span>
           {:else}
             <span class="text-[#EA4325]">Belum Selesai</span>
@@ -62,33 +62,37 @@
       </div>
       <div>
         <p class="text-xl text-center">
-          <span class="font-semibold">Total Course Selesai:</span>
-          <span>{csbData.validQuests}</span>
+          <span class="font-semibold">Total Badge Didapat:</span>
+          <span>{dgData.validBadges}</span>
         </p>
       </div>
     </div>
 
-    <div>
-      <table class="table w-full">
-        <thead>
-          <tr>
-            <th>Nama Course</th>
-            <th>Tanggal Course Selesai</th>
-          </tr>
-        </thead>
-        <tbody>
-          {#each csbData.detailValidQuests as quest}
+    {#if dgData.validBadge > 0}
+      <div>
+        <table class="table w-full">
+          <thead>
             <tr>
-              <td>{quest.questName}</td>
-              <td>{quest.questDayOfCompletion}</td>
+              <th>Nama Course</th>
+              <th>Tanggal Course Selesai</th>
             </tr>
-          {/each}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {#each dgData.detailValidBadges as badge}
+              <tr>
+                <td>{badge.badgeName}</td>
+                <td>{badge.badgeDateOfCompletion}</td>
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      </div>
+    {:else}
+      <div>Maaf, belum ada badge yang sesuai</div>
+    {/if}
   </div>
 
-  {#if csbData.tiers === 1}
+  {#if dgData.tiers === 1}
     <div class="text-slate-500 mt-4">
       <div class="animate-pulse text-[#1aa260]">
         Selamat, Anda sudah menyelesaikan pelatihan !
