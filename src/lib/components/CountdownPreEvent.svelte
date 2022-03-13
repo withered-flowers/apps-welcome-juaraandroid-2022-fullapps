@@ -8,10 +8,14 @@
   import { eventTimeStart } from "$lib/configs/config";
   import {
     eventUrl,
+    eventUrlAlias,
     countdown_pre_event_string1_start,
     countdown_pre_event_string2_further1,
     countdown_pre_event_string2_further2,
-    eventUrlAlias,
+    countdown_pre_event_string4_group1,
+    countdown_pre_event_string4_group2,
+    countdown_pre_event_string4_group3,
+    countdown_pre_event_string4_url,
   } from "$lib/strings/id";
   // import { checkEventStarted } from "$lib/utils/helper";
   import { checkEventStarted, isEventStarted } from "$lib/stores/store";
@@ -87,4 +91,12 @@
     >{eventUrlAlias}</a
   >
   {countdown_pre_event_string2_further2}
+</TextLine>
+
+<TextLine>
+  {countdown_pre_event_string4_group1}<a
+    href="{countdown_pre_event_string4_url}"
+    class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
+    >{countdown_pre_event_string4_group2}</a
+  >{countdown_pre_event_string4_group3}
 </TextLine>

@@ -14,6 +14,11 @@ export let countdown_pre_event_string2_further1: string = `Kunjungi`;
 export let countdown_pre_event_string2_further2: string = `untuk mempelajari event ${eventName} lebih lanjut`;
 export let countdown_pre_event_string3_notif: string = `Dihitung berdasarkan waktu server Google Cloud Skills Boost Pukul 00.00`;
 
+export let countdown_pre_event_string4_group1: string = `Ingin bertanya lebih lanjut? Yuk join grup `;
+export let countdown_pre_event_string4_group2: string = `Telegram ${eventName}`;
+export let countdown_pre_event_string4_group3: string = `.`;
+export let countdown_pre_event_string4_url: string = `https://t.me/JuaraAndroid`;
+
 export let countdown_event_string1_start: string = `${eventName} selesai pada`;
 export let countdown_event_string2_further1: string = `Kunjungi`;
 export let countdown_event_string2_further2: string = `untuk mempelajari event ${eventName} lebih lanjut`;
@@ -40,17 +45,17 @@ export let countdown_event_string10_url: string = `https://t.me/JuaraAndroid`;
 export let countdown_event_string11_group1: string = `Takut bila situs ini mengambil data Anda? Tenang, kode situs ini bisa dilihat di  `;
 export let countdown_event_string11_group2: string = `Github Repository`;
 export let countdown_event_string11_group3: string = ` untuk dilihat lebih lanjut.`;
-export let countdown_event_string11_url: string = `https://github.com/withered-flowers/apps-welcome-cdl-2022-fullapps`;
+export let countdown_event_string11_url: string = `https://github.com/withered-flowers/apps-welcome-juaraandroid-2022-fullapps`;
 
 export let faq_string1: string = `Pertanyaan Umum`;
 export let faq_string2_back_to_home: string = `Kembali ke Halaman Utama`;
 export let faq_array_of_string1_question: Array<QnA> = [
   {
-    q: "Pelatihan ini butuh credit card?",
+    q: "Acara  ini butuh credit card?",
     a: "Tidak. kalau butuh memasukkan credit card, artinya ada yang salah dengan langkah registrasimu. Dicek kembali yah.",
   },
   {
-    q: "Jadwal Pelatihannya dimana?",
+    q: "Jadwal Acaranya dimana?",
     a: "Bisa dicek di <a class='text-[#1aa260] hover:text-[#4285f4] hover:underline' href='/schedule'>Jadwal Pelatihan</a>",
   },
 ];

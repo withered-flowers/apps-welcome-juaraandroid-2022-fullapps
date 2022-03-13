@@ -12,11 +12,11 @@
   <form method="POST">
     <div>
       <input
-        class="px-4 py-4 rounded-full w-96 text-center mb-4"
+        class="px-4 py-4 rounded-full w-96 text-center mb-4 text-slate-500"
         type="text"
         name="dg"
         id="dg"
-        placeholder="Tautan Profil Publik Cloudskillsboost"
+        placeholder="Tautan Profil Publik Dev Google"
       />
     </div>
     <div>
