@@ -102,11 +102,10 @@
         pada tautan berikut:
       </div>
       <div>
-        <a
-          href="https://komin.fo/cdl1-submission"
-          class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
-          >CDL Submission</a
-        >
+        <!-- <a href="/" class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
+          >JuaraAndroid Submission</a
+        > -->
+        &lt;Maaf Belum Ada Link Official&gt; Mohon Bertanya di Telegram yah !
       </div>
     </div>
   {/if}
