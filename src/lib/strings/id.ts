@@ -5,13 +5,13 @@ interface QnA {
 }
 
 export const eventName = "JuaraAndroid";
-export const eventUrl = "https://rsvp.withgoogle.com/events/juara-android-22/";
+export const eventUrl = "https://goo.gle/juaraandroid";
 export const eventUrlAlias = "juara-android-22";
 
 export const countdown_pre_event_string1_start = `${eventName} dimulai dalam`;
 export const countdown_pre_event_string2_further1 = `Kunjungi`;
 export const countdown_pre_event_string2_further2 = `untuk mempelajari event ${eventName} lebih lanjut`;
-export const countdown_pre_event_string3_notif = `Dihitung berdasarkan waktu server Google Cloud Skills Boost Pukul 00.00`;
+export const countdown_pre_event_string3_notif = `Dihitung berdasarkan waktu server Google Developers Pukul 00.00`;
 
 export const countdown_pre_event_string4_group1 = `Ingin bertanya lebih lanjut? Yuk join grup `;
 export const countdown_pre_event_string4_group2 = `Telegram ${eventName}`;
@@ -55,5 +55,13 @@ export const faq_array_of_string1_question: Array<QnA> = [
   {
     q: "Jadwal Acaranya dimana?",
     a: "Bisa dicek di <a class='text-[#1aa260] hover:text-[#4285f4] hover:underline' href='/schedule'>Jadwal Pelatihan</a>",
+  },
+  {
+    q: "Daftar Google Developer Accountnya Dimana?",
+    a: "Bisa daftar di <a class='text-[#1aa260] hover:text-[#4285f4] hover:underline' href='https://developers.google.com/'>Google Developers</a>, tekan tombol biru di kanan atas <span class='font-bold'>(Sign In)</span>, dan masuk dengan akun GMail yang dimiliki",
+  },
+  {
+    q: "Bagaimana cara dapat tautan Public Profile pribadi?",
+    a: "Pastikan sudah login ke Google Developers, kemudian bisa dilihat di <a class='text-[#1aa260] hover:text-[#4285f4] hover:underline' href='https://developers.google.com/profile/u/me'>Developer Profile</a>",
   },
 ];

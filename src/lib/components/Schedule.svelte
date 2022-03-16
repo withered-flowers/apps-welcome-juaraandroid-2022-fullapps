@@ -6,13 +6,13 @@
     {
       name: "Info Session #JuaraAndroid",
       date: "17 Maret 2022, 19.00 WIB",
-      liveUrl: "https://s.id/juaraandroid1",
+      liveUrl: "https://goo.gle/juaraandroid1",
       absentUrl: "",
     },
     {
       name: "LiveCoding Session #JuaraAndroid",
       date: "28 Maret 2022, 19.00 WIB",
-      liveUrl: "https://s.id/juaraandroid2",
+      liveUrl: "https://goo.gle/juaraandroid2",
       absentUrl: "",
     },
   ];
