@@ -16,8 +16,14 @@ export const fetchDataAsJson = async (devGoogleUrl) => {
     headless: true,
   });
 
+  // split devGoogleUrl by http or https
+  let modifiedUrl =
+    devGoogleUrl.split("//").length > 1
+      ? devGoogleUrl
+      : `https://${devGoogleUrl}`;
+
   const page = await browser.newPage();
-  await page.goto(devGoogleUrl);
+  await page.goto(modifiedUrl);
 
   const profileName = await fetchProfileName(page);
   const nodeList = await fetchNodeList(page);
