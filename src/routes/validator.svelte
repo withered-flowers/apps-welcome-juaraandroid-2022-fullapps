@@ -102,10 +102,11 @@
         pada tautan berikut:
       </div>
       <div>
-        <!-- <a href="/" class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfV3JqmbZYfgSHUKYD0Jx5KdsTM8Tv-LoXj0FjJwhn0ph0Kbg/viewform"
+          class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
           >JuaraAndroid Submission</a
-        > -->
-        &lt;Maaf Belum Ada Link Official&gt; Mohon Bertanya di Telegram yah !
+        >
       </div>
     </div>
   {/if}
