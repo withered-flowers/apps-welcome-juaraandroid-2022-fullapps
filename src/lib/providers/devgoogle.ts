@@ -9,10 +9,11 @@ import {
 } from "$lib/utils/validator-devgoogle.js";
 
 export const fetchDataAsJson = async (devGoogleUrl) => {
-  const browser = await puppeteer.launch({
+  const browser = await chromium.puppeteer.launch({
     args: chromium.args,
     executablePath:
       process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath),
+    defaultViewport: chromium.defaultViewport,
     headless: true,
   });
 
@@ -25,9 +26,20 @@ export const fetchDataAsJson = async (devGoogleUrl) => {
   const page = await browser.newPage();
   await page.goto(modifiedUrl);
 
+  // let startTime = performance.now();
   const profileName = await fetchProfileName(page);
+  // let endTime = performance.now();
+  // console.log("Fetch Profile Name", endTime - startTime);
+
+  // startTime = performance.now();
   const nodeList = await fetchNodeList(page);
+  // endTime = performance.now();
+  // console.log("Fetch Node List", endTime - startTime);
+
+  // startTime = performance.now();
   const validBadges = await filterBadge(nodeList);
+  // endTime = performance.now();
+  // console.log("Filter Badges", endTime - startTime);
 
   const tiers = calculateTiers(validBadges);
 

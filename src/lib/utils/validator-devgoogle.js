@@ -73,10 +73,13 @@ export const filterBadge = async (nodeList) => {
 };
 
 export const fetchProfileName = async (page) => {
+  // let startTime = performance.now();
   await page.waitForSelector(".profile-name", {
-    idleTime: 2000,
-    timeout: 30000,
+    // idleTime: 2000,
+    // timeout: 8000,
   });
+  // let endTime = performance.now();
+  // console.log("waitForSelector", endTime - startTime);
 
   let elementProfileName = await page.$(".profile-name > h2");
   let valueProfileName = await elementProfileName.evaluate(
@@ -88,8 +91,8 @@ export const fetchProfileName = async (page) => {
 
 export const fetchNodeList = async (page) => {
   await page.waitForSelector("#all-profile-badges-container", {
-    idleTime: 2000,
-    timeout: 30000,
+    // idleTime: 2000,
+    // timeout: 30000,
   });
 
   let elementNodeList = await page.$$(
