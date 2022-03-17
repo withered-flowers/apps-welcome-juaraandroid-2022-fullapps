@@ -68,7 +68,7 @@
       </div>
     </div>
 
-    {#if dgData.validBadge > 0}
+    {#if dgData.validBadges > 0}
       <div>
         <table class="table w-full">
           <thead>
