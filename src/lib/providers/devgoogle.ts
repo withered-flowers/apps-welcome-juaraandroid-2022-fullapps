@@ -1,5 +1,5 @@
 import chromium from "chrome-aws-lambda";
-import puppeteer from "puppeteer-core";
+import playwright from "playwright";
 
 import {
   fetchProfileName,
@@ -9,11 +9,10 @@ import {
 } from "$lib/utils/validator-devgoogle.js";
 
 export const fetchDataAsJson = async (devGoogleUrl) => {
-  const browser = await chromium.puppeteer.launch({
+  const browser = await playwright.chromium.launch({
     args: chromium.args,
     executablePath:
       process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath),
-    defaultViewport: chromium.defaultViewport,
     headless: true,
   });
 

@@ -76,7 +76,7 @@ export const fetchProfileName = async (page) => {
   // let startTime = performance.now();
   await page.waitForSelector(".profile-name", {
     // idleTime: 2000,
-    // timeout: 8000,
+    // timeout: 5000,
   });
   // let endTime = performance.now();
   // console.log("waitForSelector", endTime - startTime);
