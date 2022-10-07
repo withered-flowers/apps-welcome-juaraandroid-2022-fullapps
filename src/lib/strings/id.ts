@@ -5,8 +5,8 @@ interface QnA {
 }
 
 export const eventName = "JuaraAndroid";
-export const eventUrl = "https://goo.gle/juaraandroid";
-export const eventUrlAlias = "juara-android-22";
+export const eventUrl = "https://goo.gle/juara-android";
+export const eventUrlAlias = "JuaraAndroid with Compose Camp";
 
 export const countdown_pre_event_string1_start = `${eventName} dimulai dalam`;
 export const countdown_pre_event_string2_further1 = `Kunjungi`;
@@ -14,7 +14,7 @@ export const countdown_pre_event_string2_further2 = `untuk mempelajari event ${e
 export const countdown_pre_event_string3_notif = `Dihitung berdasarkan waktu server Google Developers Pukul 00.00`;
 
 export const countdown_pre_event_string4_group1 = `Ingin bertanya lebih lanjut? Yuk join grup `;
-export const countdown_pre_event_string4_group2 = `Telegram ${eventName}`;
+export const countdown_pre_event_string4_group2 = `Telegram ${eventName} `;
 export const countdown_pre_event_string4_group3 = `.`;
 export const countdown_pre_event_string4_url = `https://t.me/JuaraAndroid`;
 
@@ -36,9 +36,12 @@ export const countdown_event_string8_validator2 = "Pengecek Profil Publik";
 export const countdown_event_string8_validator3 = " ini yah";
 
 export const countdown_event_string10_group1 = `Masih buntu? Yuk join grup `;
-export const countdown_event_string10_group2 = `Telegram ${eventName}`;
-export const countdown_event_string10_group3 = ` untuk menanyakan lebih lanjut.`;
+export const countdown_event_string10_group2 = `Telegram ${eventName} `;
+export const countdown_event_string10_group3 = ` Discord Google Developers Community Indonesia `;
+export const countdown_event_string10_group4 = ` atau `;
+export const countdown_event_string10_group5 = ` untuk menanyakan lebih lanjut.`;
 export const countdown_event_string10_url = `https://t.me/JuaraAndroid`;
+export const countdown_event_string10_url_2 = `https://goo.gle/googledevsid`;
 
 export const countdown_event_string11_group1 = `Takut bila situs ini mengambil data Anda? Tenang, kode situs ini bisa dilihat di  `;
 export const countdown_event_string11_group2 = `Github Repository`;

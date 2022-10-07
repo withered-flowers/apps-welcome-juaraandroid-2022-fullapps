@@ -22,11 +22,15 @@
     countdown_event_string10_group1,
     countdown_event_string10_group2,
     countdown_event_string10_group3,
+    countdown_event_string10_group4,
+    countdown_event_string10_group5,
     countdown_event_string10_url,
+    countdown_event_string10_url_2,
     countdown_event_string11_group1,
     countdown_event_string11_group2,
     countdown_event_string11_group3,
     countdown_event_string11_url,
+
   } from "$lib/strings/id";
   import { isEventEnded, checkEventEnded } from "$lib/stores/store";
 
@@ -133,7 +137,11 @@
     href="{countdown_event_string10_url}"
     class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
     >{countdown_event_string10_group2}</a
-  >{countdown_event_string10_group3}
+  >{countdown_event_string10_group4}<a
+  href="{countdown_event_string10_url_2}"
+  class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
+  >{countdown_event_string10_group3}</a
+>{countdown_event_string10_group5}
 </TextLine>
 
 <TextLine>
