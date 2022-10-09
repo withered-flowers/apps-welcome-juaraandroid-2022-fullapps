@@ -1,8 +1,11 @@
 [build]
   command = "npm run build"
-  publish = "build/"
+  publish = ".svelte-kit/build/"
 
 [functions]
   directory = "functions/"
   node_bundler = "esbuild"
   external_node_modules = ["chrome-aws-lambda"]
+
+[dev]
+  targetPort = 5173
