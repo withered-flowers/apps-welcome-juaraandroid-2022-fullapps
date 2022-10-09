@@ -16,16 +16,19 @@ export const LIST_OF_BADGE: string[] = [
   "Navigation in Jetpack Compose",
   "Adapt for different screen sizes",
   // Unit 4: Navigation and app architecture
-  "Coroutines",
-  "Get and display data from the internet",
+  "Architecture Components",
+  "Navigation in Jetpack Compose",
+  "Adapt for different screen sizes",
 
   // Jetpack Compose for Android Developers
   "Compose essentials",
   "Layouts, theming, and animation",
   "Architecture and state",
   "Accessibility, testing, and performance",
+  "Form factors",
 ];
 
 export const DATE_RANGE: string[] = ["2022-10-04", "2022-10-30"];
 
-export const TIERS: number[] = [16];
+// tiers 1: 12, tier 2: 17
+export const TIERS: number[] = [12];

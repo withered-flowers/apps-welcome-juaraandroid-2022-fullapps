@@ -109,8 +109,6 @@ export const calculateTiers = (validBadges) => {
   TIERS.forEach((minBadge, index) => {
     if (total == minBadge) {
       tiers = index + 1;
-    } else if (total >= minBadge) {
-      tiers = index + 1;
     }
   });
 
