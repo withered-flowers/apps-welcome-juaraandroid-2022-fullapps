@@ -14,6 +14,7 @@ export const fetchDataAsJson = async (devGoogleUrl) => {
       process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath),
     defaultViewport: chromium.defaultViewport,
     headless: true,
+    ignoreDefaultArgs: ["--disable-extensions"],
   });
 
   // split devGoogleUrl by http or https

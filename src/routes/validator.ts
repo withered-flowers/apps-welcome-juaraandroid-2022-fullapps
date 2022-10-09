@@ -17,7 +17,7 @@ export async function post({ request }) {
     return {
       status: 404,
       body: {
-        errors: "Tautan Profil salah, silahkan coba masukkan tautan lagi",
+        errors: `Error: ${error}`,
       },
     };
   }

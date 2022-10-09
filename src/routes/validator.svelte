@@ -16,7 +16,7 @@
         type="text"
         name="dg"
         id="dg"
-        placeholder="Tautan Profil Publik Dev Google"
+        placeholder="g.dev/username"
       />
     </div>
     <div>
@@ -54,7 +54,9 @@
         <p class="text-xl text-center">
           <span class="font-semibold">Selesai Pelatihan? </span>
           {#if dgData.tiers === 1}
-            <span class="text-[#1aa260]">Selesai</span>
+            <span class="text-[#1aa260]">Selesai Tier 1</span>
+          {:else if dgData.tiers === 2}
+          <span class="text-[#1aa260]">Selesai Tier 2</span>
           {:else}
             <span class="text-[#EA4325]">Belum Selesai</span>
           {/if}
@@ -95,15 +97,15 @@
   {#if dgData.tiers === 1}
     <div class="text-slate-500 mt-4">
       <div class="animate-pulse text-[#1aa260]">
-        Selamat, Anda sudah menyelesaikan pelatihan !
+        Selamat, Anda sudah menyelesaikan pelatihan!
       </div>
       <div>
-        Silahkan mengisi pada Form submission untuk mengirimkan data ke Kominfo
+        Silahkan mengisi pada Form submission untuk mengirimkan data ke Team #JuaraAndroid
         pada tautan berikut:
       </div>
       <div>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfV3JqmbZYfgSHUKYD0Jx5KdsTM8Tv-LoXj0FjJwhn0ph0Kbg/viewform"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScCsjQQ6PNb1DX5lkPTWE7FgsRbid_4-V4DWR7XiQBw2JZRgQ/viewform"
           class="text-[#1aa260] hover:text-[#4285f4] hover:underline"
           >JuaraAndroid Submission</a
         >

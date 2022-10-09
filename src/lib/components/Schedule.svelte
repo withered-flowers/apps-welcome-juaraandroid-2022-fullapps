@@ -4,15 +4,15 @@
 
   const scheduleData = [
     {
-      name: "Info Session #JuaraAndroid",
-      date: "17 Maret 2022, 19.00 WIB",
-      liveUrl: "https://goo.gle/juaraandroid1",
+      name: "#JuaraAndroid Season 2 - Onboarding",
+      date: "7 Oktober 2022, 17.00 WIB",
+      liveUrl: "https://goo.gle/juara-android-info",
       absentUrl: "",
     },
     {
-      name: "LiveCoding Session #JuaraAndroid",
-      date: "28 Maret 2022, 19.00 WIB",
-      liveUrl: "https://goo.gle/juaraandroid2",
+      name: "#JuaraAndroid Bogor",
+      date: "22 Oktober 2022, 09.00 WIB",
+      liveUrl: "https://bit.ly/JuaraAndroidBogor1",
       absentUrl: "",
     },
   ];

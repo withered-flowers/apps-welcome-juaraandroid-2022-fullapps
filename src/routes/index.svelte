@@ -12,6 +12,7 @@
   import CountdownEvent from "$lib/components/CountdownEvent.svelte";
 
   import { isEventStarted, isEventEnded } from "$lib/stores/store";
+  import { eventName } from "$lib/strings/id";
 
   let eventStarted;
   let eventEnded;
@@ -32,4 +33,5 @@
   <CountdownEvent />
 {:else if eventEnded}
   <CountdownEvent />
+  
 {/if}
